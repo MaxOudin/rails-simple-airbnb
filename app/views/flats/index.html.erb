@@ -11,7 +11,7 @@
       <li class="list-group-item mx-3 px-6">
         <i class="fa-solid fa-user"></i><%= flat.number_of_guests %>
         <i class="fa-solid fa-euro-sign"></i><%= flat.price_per_night %>
-      <li class="list-group-item"><%=  link_to 'More info', 'flat_path'%></li>
+      <li class="list-group-item"><%=  link_to 'More info', flat_path(flat)%></li>
     </ul>
   </div>
 <% end %>
