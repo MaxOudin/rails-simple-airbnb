@@ -1,0 +1,18 @@
+<h2>All our flats (<%= @flats.count %>)</h2>
+<div class="d-flex flex-inline justify-content-between">
+<% @flats.each do |flat| %>
+  <div class="card" style="width: 18rem;">
+    <%# <img class="card-img-top" src="..." alt="Card image cap"> %>
+    <div class="card-body">
+      <h5 class="card-title"><%= flat.name %></h5>
+    </div>
+    <ul class="list-group list-group-flush d-flex justify-content-between">
+      <li class="list-group-item"><%= flat.address %></li>
+      <li class="list-group-item mx-3 px-6">
+        <i class="fa-solid fa-user"></i><%= flat.number_of_guests %>
+        <i class="fa-solid fa-euro-sign"></i><%= flat.price_per_night %>
+      <li class="list-group-item"><%=  link_to 'More info', 'flat_path'%></li>
+    </ul>
+  </div>
+<% end %>
+</div>

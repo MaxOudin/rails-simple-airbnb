@@ -10,7 +10,7 @@ Flat.destroy_all
 
 puts "creation of 5 flats"
 
-Flat.create!(
+paris = Flat.create!(
   name: 'Light & Spacious Garden Flat London',
   address: '10 Clifton Gardens London W9 1DT',
   description: 'A lovely summer feel for this spacious garden flat. Two double bedrooms, open plan living area, large kitchen and a beautiful conservatory',
@@ -18,7 +18,7 @@ Flat.create!(
   number_of_guests: 3
 )
 
-Flat.create!(
+london = Flat.create!(
   name: 'Super flat in Bordeaux',
   address: 'Quais des Chartrons',
   description: 'A lovely summer feel for this spacious garden flat. Two double bedrooms, open plan living area, large kitchen and a beautiful conservatory',
@@ -26,7 +26,7 @@ Flat.create!(
   number_of_guests: 5
 )
 
-Flat.create!(
+barcelona = Flat.create!(
   name: 'Lovely charming apartment in Paris',
   address: 'Tour eiffel 75000',
   description: 'A lovely summer feel for this spacious garden flat. Two double bedrooms, open plan living area, large kitchen and a beautiful conservatory',
@@ -34,7 +34,7 @@ Flat.create!(
   number_of_guests: 2
 )
 
-Flat.create!(
+marseille = Flat.create!(
   name: 'Vue sur la cannebiere Marseille',
   address: 'Vieux Port Bonne Mere Marseille',
   description: 'A lovely summer feel for this spacious garden flat. Two double bedrooms, open plan living area, large kitchen and a beautiful conservatory',
@@ -42,12 +42,18 @@ Flat.create!(
   number_of_guests: 4
 )
 
-Flat.create!(
+sedan = Flat.create!(
   name: 'Vue sur la mer avec grande terrasse Barcelone',
   address: 'Rondas proche du bar Barcelona',
   description: 'A lovely summer feel for this spacious garden flat. Two double bedrooms, open plan living area, large kitchen and a beautiful conservatory',
   price_per_night: 59,
   number_of_guests: 3
 )
+
+sedan.save
+marseille.save
+barcelona.save
+london.save
+paris.save
 
 puts "done creation"
